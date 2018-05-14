@@ -42,7 +42,7 @@ class editor extends WindowAdapter implements ActionListener
 		//f.addWindowListener(e1);
 		dex=new Dialog(f);
 		dex.setSize(300,150);
-					
+
 					//dex.addWindowListener(this);
 					dex.setLayout(new GridLayout(2,0));
 					//pn1=new Panel();
@@ -116,7 +116,7 @@ class editor extends WindowAdapter implements ActionListener
 					{
 					d1=new Dialog(f);
 					d1.setSize(300,150);
-					
+
 					d1.addWindowListener(this);
 					d1.setLayout(new GridLayout(2,0));
 					pn1=new Panel();
@@ -139,7 +139,7 @@ class editor extends WindowAdapter implements ActionListener
 									{
 										//System.out.print("Hello");
 										fouts.createNewFile();
-									}				
+									}
 									fossave=new FileOutputStream(fd3.getDirectory()+fouts);
 									fossave.write(t1.getText().getBytes());
 									temp=t1.getText();
@@ -158,7 +158,7 @@ class editor extends WindowAdapter implements ActionListener
 							{
 								try
 								{
-								System.out.print("sveot");	
+								System.out.print("sveot");
 								fossave=new FileOutputStream(fd3.getDirectory()+fouts);
 								fossave.write(t1.getText().getBytes());
 								}
@@ -195,7 +195,7 @@ class editor extends WindowAdapter implements ActionListener
 							temp=t1.getText();
 						}
 					});
-					ln=new Label("Do you want to save?");
+					ln=new Label("Do you want to save the changes?");
 					pn1.add(ln);
 					pn2.add(b4);
 					pn2.add(b5);
@@ -203,7 +203,7 @@ class editor extends WindowAdapter implements ActionListener
 					d1.add(pn1);
 					d1.add(pn2);
 					d1.setVisible(true);
-					
+
 				}
 				else
 				{
@@ -230,9 +230,9 @@ class editor extends WindowAdapter implements ActionListener
 							try{
 						fossave=new FileOutputStream(fd3.getDirectory()+fouts);
 						fossave.write(t1.getText().getBytes());
-						
+
 							}
-							
+
 							catch(Exception e)
 							{
 								System.out.print(e.getMessage());
@@ -242,7 +242,7 @@ class editor extends WindowAdapter implements ActionListener
 							temp=t1.getText();
 						f.setTitle("Untitled");
 						}
-						
+
 					});
 					b5=new Button("No");
 					b5.addActionListener(new ActionListener()
@@ -253,7 +253,7 @@ class editor extends WindowAdapter implements ActionListener
 							f.setTitle("Untitled");
 							t1.setText("");
 							temp=t1.getText();
-							
+
 						}
 					});
 					b6=new Button("Cancel");
@@ -278,7 +278,7 @@ class editor extends WindowAdapter implements ActionListener
 				}
 				}
 			}
-			
+
 		if(e.getSource()==opn)
 		{
 			try
@@ -299,7 +299,7 @@ class editor extends WindowAdapter implements ActionListener
 					bis=new BufferedInputStream(fis1);
 					//fosopen=new FileOutputStream(sopen);
 					//System.out.print("Name::"+filename);
-										
+
 					while((ch=bis.read())!=-1)
 					{
 						//fosopen.write(ch);
@@ -308,17 +308,17 @@ class editor extends WindowAdapter implements ActionListener
 					}
 					//vsave=t1.getText();
 					temp=t1.getText();
-					
+
 					//System.out.println(vsave);
 					bis.close();
 					fosopen.close();
-					
+
 				}
-				
+
 				else if(t1.getText().equals(temp))
 				{
 					//System.out.println("open inside");
-					
+
 					fd1=new FileDialog(f,"Open",FileDialog.LOAD);
 					fd1.setVisible(true);
 					//d1.setVisible(true);
@@ -329,7 +329,7 @@ class editor extends WindowAdapter implements ActionListener
 					bis=new BufferedInputStream(fis1);
 					t1.setText("");
 					//fosopen=new FileOutputStream(sopen);
-					//System.out.print("Name::"+filename);	
+					//System.out.print("Name::"+filename);
 					while((ch=bis.read())!=-1)
 					{
 						//fosopen.write(ch);
@@ -341,9 +341,9 @@ class editor extends WindowAdapter implements ActionListener
 					//System.out.println(vsave);
 					bis.close();
 					fosopen.close();
-					
+
 				}
-				else 
+				else
 				{System.out.println(vsave);
 					d1=new Dialog(f);
 					d1.setSize(300,150);
@@ -353,7 +353,7 @@ class editor extends WindowAdapter implements ActionListener
 					b4=new Button("Yes");
 					b4.addActionListener(new ActionListener()
 					{
-						public void actionPerformed(ActionEvent ae3) 
+						public void actionPerformed(ActionEvent ae3)
 						{
 							if(f.getTitle().equals("Untitled"))
 							{
@@ -367,11 +367,11 @@ class editor extends WindowAdapter implements ActionListener
 									{
 										//System.out.print("Hello");
 										fouts.createNewFile();
-									}				
+									}
 									fossave=new FileOutputStream(fd3.getDirectory()+fouts);
 									fossave.write(t1.getText().getBytes());
-									
-									
+
+
 									//vsave=t1.getText();
 									//
 									//System.out.println("open inside");
@@ -384,7 +384,7 @@ class editor extends WindowAdapter implements ActionListener
 									fis1=new FileInputStream(path+"\\"+filename);
 									bis=new BufferedInputStream(fis1);
 									//fosopen=new FileOutputStream(sopen);
-									//System.out.print("Name::"+filename);	
+									//System.out.print("Name::"+filename);
 									while((ch=bis.read())!=-1)
 									{
 										//fosopen.write(ch);
@@ -406,7 +406,7 @@ class editor extends WindowAdapter implements ActionListener
 								try
 								{
 								d1.setVisible(false);
-								System.out.print("sveot");	
+								System.out.print("sveot");
 								fossave=new FileOutputStream(fd1.getDirectory()+fd1.getFile());
 								fossave.write(t1.getText().getBytes());
 								vsave=null;
@@ -421,7 +421,7 @@ class editor extends WindowAdapter implements ActionListener
 									fis1=new FileInputStream(path+"\\"+filename);
 									bis=new BufferedInputStream(fis1);
 									//fosopen=new FileOutputStream(sopen);
-									//System.out.print("Name::"+filename);	
+									//System.out.print("Name::"+filename);
 									while((ch=bis.read())!=-1)
 									{
 										//fosopen.write(ch);
@@ -440,10 +440,10 @@ class editor extends WindowAdapter implements ActionListener
 						}
 					});
 					b5=new Button("No");
-					
+
 					b5.addActionListener(new ActionListener()
 					{
-						public void actionPerformed(ActionEvent ae1) 
+						public void actionPerformed(ActionEvent ae1)
 						{
 							try
 					{
@@ -457,7 +457,7 @@ class editor extends WindowAdapter implements ActionListener
 									fis1=new FileInputStream(path+filename);
 									bis=new BufferedInputStream(fis1);
 									//fosopen=new FileOutputStream(sopen);
-									//System.out.print("Name::"+filename);	
+									//System.out.print("Name::"+filename);
 									t1.setText("");
 									while((ch=bis.read())!=-1)
 									{
@@ -467,9 +467,9 @@ class editor extends WindowAdapter implements ActionListener
 									}
 									temp=t1.getText();
 									bis.close();
-									
+
 									fosopen.close();
-									
+
 									vsave=null;
 					}
 					catch(Exception ee1)
@@ -477,10 +477,10 @@ class editor extends WindowAdapter implements ActionListener
 						System.out.print(ee1.getMessage());
 					}
 						}
-					
+
 					});
-					
-					
+
+
 					b6=new Button("Cancel");
 					b6.addActionListener(new ActionListener()
 					{
@@ -497,11 +497,11 @@ class editor extends WindowAdapter implements ActionListener
 					d1.add(pn1);
 					d1.add(pn2);
 					d1.setVisible(true);
-					
+
 				}
-				
-			
-								
+
+
+
 			//System.out.print(sopen);
 		}
 		catch(Exception ee)
@@ -541,7 +541,7 @@ class editor extends WindowAdapter implements ActionListener
 			d3.add(treplace,gbc);
 			pfr=new Panel();
 			Button bfind=new Button("Find");
-			
+
 			bfind.addActionListener(new ActionListener()
 			{
 				public void actionPerformed(ActionEvent ae2)
@@ -557,7 +557,7 @@ class editor extends WindowAdapter implements ActionListener
 					Matcher m1=p1.matcher(value1);
 					System.out.print(temp);
 					if(m1.find(start))
-					{	
+					{
 						//System.out.println("if1 ");
 						start=m1.start();
 						end=m1.end();
@@ -575,15 +575,15 @@ class editor extends WindowAdapter implements ActionListener
 						start=m1.start();
 						end=m1.end();
 					}
-					
+
 					//System.out.println(m.start()+" "+m.end()+" "+cp);
-					
+
 					}
 					catch(Exception e4)
 					{
 						System.out.print(e4.getMessage());
 					}
-					
+
 				}
 			});
 			Button breplace=new Button("Replace Next");
@@ -591,8 +591,8 @@ class editor extends WindowAdapter implements ActionListener
 			{
 				public void actionPerformed(ActionEvent ae3)
 								{
-				
-					
+
+
 			if(!(t1.getSelectedText().equals(tfind.getText())))
 			{
 				try{
@@ -605,7 +605,7 @@ class editor extends WindowAdapter implements ActionListener
 					Pattern p1=Pattern.compile(tfind.getText());
 					Matcher m1=p1.matcher(value1);
 					if(m1.find(start))
-					{	
+					{
 						//System.out.println("if1 ");
 						start=m1.start();
 						end=m1.end();
@@ -623,9 +623,9 @@ class editor extends WindowAdapter implements ActionListener
 						start=m1.start();
 						end=m1.end();
 					}
-					
+
 					//System.out.println(m.start()+" "+m.end()+" "+cp);
-					
+
 					}
 					catch(Exception e4)
 					{
@@ -634,9 +634,9 @@ class editor extends WindowAdapter implements ActionListener
 			}
 			else if(t1.getSelectedText().equals(tfind.getText()))
 				t1.replaceText(treplace.getText(), start, end);
-					
-					
-					
+
+
+
 				}
 			});
 			Button breplaceall=new Button("Replace All");
@@ -674,7 +674,7 @@ class editor extends WindowAdapter implements ActionListener
 			d3.add(pfr,gbc);
 			d3.setVisible(true);
 		}
-		
+
 		if(e.getSource()==sveas)
 		{
 			try
@@ -697,7 +697,7 @@ class editor extends WindowAdapter implements ActionListener
 			}
 			vsave=t1.getText();
 		}
-		
+
 		if(e.getSource()==sve)
 			{
 				String fdir=path;
@@ -706,8 +706,8 @@ class editor extends WindowAdapter implements ActionListener
 				//f.setTitle(fd1.getFile());
 				//System.out.print("sve");
 				if(f.getTitle().equals("Untitled"))
-				{	
-					System.out.print("svein");			
+				{
+					System.out.print("svein");
 					try
 					{
 						fd3=new FileDialog(f,"Save",FileDialog.SAVE);
@@ -735,18 +735,18 @@ class editor extends WindowAdapter implements ActionListener
 				{
 					//temp=t1.getText();
 					//System.out.print(t1.getText());
-					System.out.print("sveot");	
+					System.out.print("sveot");
 					fossave=new FileOutputStream(fdir+ffile);
 					fossave.write(t1.getText().getBytes());
 					temp=t1.getText();
-				}					
+				}
 			}
 		}
 		catch(Exception e1)
 		{
 			System.out.print(e1.getMessage());
 		}
-		
+
 		if(e.getSource()==ext)
 		{
 			//temp=t1.getText();
@@ -758,7 +758,7 @@ class editor extends WindowAdapter implements ActionListener
 				test=t1.getText();
 				flag++;
 			}
-			
+
 			//System.out.print("Hlo save");
 			if(t1.getText().equals(""))
 			{
@@ -771,9 +771,9 @@ class editor extends WindowAdapter implements ActionListener
 					System.exit(0);
 					vsave=t1.getText();
 					temp=t1.getText();
-					
+
 				}
-				else 
+				else
 				{
 					System.out.println("exit");
 					d1=new Dialog(f);
@@ -784,7 +784,7 @@ class editor extends WindowAdapter implements ActionListener
 					b4=new Button("Yes");
 					b4.addActionListener(new ActionListener()
 					{
-						public void actionPerformed(ActionEvent ae3) 
+						public void actionPerformed(ActionEvent ae3)
 						{
 							if(f.getTitle().equals("Untitled"))
 							{
@@ -799,7 +799,7 @@ class editor extends WindowAdapter implements ActionListener
 									{
 										//System.out.print("Hello");
 										fouts.createNewFile();
-									}				
+									}
 									fossave=new FileOutputStream(fd3.getDirectory()+fouts);
 									fossave.write(t1.getText().getBytes());
 									vsave=null;
@@ -817,7 +817,7 @@ class editor extends WindowAdapter implements ActionListener
 								{
 									System.out.print("Hello code");
 								d1.setVisible(false);
-								System.out.print("sveot");	
+								System.out.print("sveot");
 								fossave=new FileOutputStream(fd1.getDirectory()+fd1.getFile());
 								fossave.write(t1.getText().getBytes());
 								vsave=null;
@@ -836,12 +836,12 @@ class editor extends WindowAdapter implements ActionListener
 							}
 						}
 					});
-					
+
 					b5=new Button("No");
-					
+
 					b5.addActionListener(new ActionListener()
 					{
-						public void actionPerformed(ActionEvent ae1) 
+						public void actionPerformed(ActionEvent ae1)
 						{
 							try
 							{
@@ -855,8 +855,8 @@ class editor extends WindowAdapter implements ActionListener
 							}
 						}
 					});
-					
-					
+
+
 					b6=new Button("Cancel");
 					b6.addActionListener(new ActionListener()
 					{
@@ -873,12 +873,12 @@ class editor extends WindowAdapter implements ActionListener
 					d1.add(pn1);
 					d1.add(pn2);
 					d1.setVisible(true);
-					
+
 				}
-			
+
 		}
 
-	
+
 		if(e.getSource()==find)
 		{
 			d4=new Dialog(f);
@@ -919,9 +919,9 @@ class editor extends WindowAdapter implements ActionListener
 					value.replaceAll("/r",null);*/
 					Pattern p=Pattern.compile(tfind1.getText());
 					Matcher m=p.matcher(value);
-						
+
 					if(m.find(start))
-					{	
+					{
 						//System.out.println("if1 ");
 						start=m.start();
 						end=m.end();
@@ -931,10 +931,10 @@ class editor extends WindowAdapter implements ActionListener
 						t1.select(start,end);
 						//System.out.println(m.end());
 						//cp=end;
-						
+
 					}
 					//if(m.find(end))
-					/*else 
+					/*else
 					{
 						//System.out.println("if2  ");
 						start=m.start();
@@ -944,7 +944,7 @@ class editor extends WindowAdapter implements ActionListener
 					}
 					*/
 					//System.out.println(m.start()+" "+m.end()+" "+cp);
-					
+
 					}
 					catch(Exception e4)
 					{
@@ -968,8 +968,8 @@ class editor extends WindowAdapter implements ActionListener
 			gbc1.weightx=1.0;	gbc1.weighty=1.0;
 			d4.add(pfr1,gbc1);
 			d4.setVisible(true);
-			
-			
+
+
 		}
 		if(e.getSource()==fnt)
 		{
@@ -990,7 +990,7 @@ class editor extends WindowAdapter implements ActionListener
 			gbc1.weightx=1.0;	gbc1.weighty=1.0;
 			//d5.add(lfont,gbc1);
 			d5.setVisible(true);
-			
+
 		}
 		if(e.getSource()==increase)
 		{
@@ -1010,10 +1010,10 @@ class editor extends WindowAdapter implements ActionListener
 			gbc1.anchor=GridBagConstraints.NORTH;
 			gbc1.weightx=1.0;	gbc1.weighty=1.0;
 			d6.setVisible(true);
-			
+
 			//System.out.print("Inside Increase");
 			//t1.setText("Inside Increase");
-			
+
 		}
 		if(e.getSource()==decrease)
 		{
@@ -1060,7 +1060,7 @@ class editor extends WindowAdapter implements ActionListener
 			//System.out.print("Inside Increase");
 			//t1.setText("Inside Increase");
 		}
-		
+
 		if(e.getSource()==increase)
 		{
 			Dialog d7=new Dialog(f);
@@ -1080,7 +1080,7 @@ class editor extends WindowAdapter implements ActionListener
 			gbc1.weightx=1.0;	gbc1.weighty=1.0;
 			d7.add(decrease,gbc1);
 			TextField new_size=new TextField();
-			
+
 			gbc1.gridx=1;
 			gbc1.weightx=1.0;	gbc1.weighty=1.0;
 			d7.add(new_size,gbc1);
@@ -1109,9 +1109,9 @@ class editor extends WindowAdapter implements ActionListener
 			//System.out.print("Inside Increase");
 			//t1.setText("Inside Increase");
 		}
-		
-		
-		
+
+
+
 	}
 	public void windowClosing(WindowEvent e)
 	{
@@ -1130,9 +1130,9 @@ class editor extends WindowAdapter implements ActionListener
 					w.dispose();
 					vsave=t1.getText();
 					temp=t1.getText();
-					
+
 				}
-				else 
+				else
 				{
 					//System.out.println("exit");
 					d1=new Dialog(f);
@@ -1143,7 +1143,7 @@ class editor extends WindowAdapter implements ActionListener
 					b4=new Button("Yes");
 					b4.addActionListener(new ActionListener()
 					{
-						public void actionPerformed(ActionEvent ae3) 
+						public void actionPerformed(ActionEvent ae3)
 						{
 							if(f.getTitle().equals("Untitled"))
 							{
@@ -1158,7 +1158,7 @@ class editor extends WindowAdapter implements ActionListener
 									{
 										//System.out.print("Hello");
 										fouts.createNewFile();
-									}				
+									}
 									fossave=new FileOutputStream(fd3.getDirectory()+fouts);
 									fossave.write(t1.getText().getBytes());
 									vsave=null;
@@ -1166,7 +1166,7 @@ class editor extends WindowAdapter implements ActionListener
 									w=e.getWindow();
 									w.setVisible(false);
 									w.dispose();
-									
+
 								}
 								catch(Exception e2)
 									{
@@ -1179,7 +1179,7 @@ class editor extends WindowAdapter implements ActionListener
 								{
 									System.out.print("Hello code");
 								d1.setVisible(false);
-								System.out.print("sveot");	
+								System.out.print("sveot");
 								fossave=new FileOutputStream(fd1.getDirectory()+fd1.getFile());
 								fossave.write(t1.getText().getBytes());
 								vsave=null;
@@ -1200,12 +1200,12 @@ class editor extends WindowAdapter implements ActionListener
 							}
 						}
 					});
-					
+
 					b5=new Button("No");
-					
+
 					b5.addActionListener(new ActionListener()
 					{
-						public void actionPerformed(ActionEvent ae1) 
+						public void actionPerformed(ActionEvent ae1)
 						{
 							try
 							{
@@ -1221,8 +1221,8 @@ class editor extends WindowAdapter implements ActionListener
 							}
 						}
 					});
-					
-					
+
+
 					b6=new Button("Cancel");
 					b6.addActionListener(new ActionListener()
 					{
@@ -1239,12 +1239,12 @@ class editor extends WindowAdapter implements ActionListener
 					d1.add(pn1);
 					d1.add(pn2);
 					d1.setVisible(true);
-					
+
 				}
 	}
 	public static void main(String args[])
 	{
 		editor e1=new editor();
-		
+
 	}
 }
